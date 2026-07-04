@@ -90,7 +90,7 @@ export default function AboutView({ setCurrentTab }: AboutViewProps) {
             <div className="relative w-full max-w-[340px] aspect-[4/5] rounded-3xl overflow-hidden border border-gray-200/80 dark:border-zinc-800 p-2 bg-white dark:bg-zinc-900 shadow-xl">
               <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/10 to-cyan-500/10" />
               <img
-                src="/yaw-profile-photo.png"
+                src="../../images/yaw-profile-photo.png"
                 alt="Yaw - AI Automation Specialist"
                 className="h-full w-full object-cover rounded-2xl filter contrast-105"
                 referrerPolicy="no-referrer"

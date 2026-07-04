@@ -90,9 +90,9 @@ export default function AboutView({ setCurrentTab }: AboutViewProps) {
             <div className="relative w-full max-w-[340px] aspect-[4/5] rounded-3xl overflow-hidden border border-gray-200/80 dark:border-zinc-800 p-2 bg-white dark:bg-zinc-900 shadow-xl">
               <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/10 to-cyan-500/10" />
               <img
-                src="../../images/yaw-profile-photo.png"
+                src="/images/yaw-profile-photo.png"
                 alt="Yaw - AI Automation Specialist"
-                className="h-full w-full object-cover rounded-2xl filter contrast-105"
+                className="h-full w-full object-cover rounded-2xl contrast-105"
                 referrerPolicy="no-referrer"
               />
               {/* Overlay Tag */}
@@ -239,17 +239,19 @@ export default function AboutView({ setCurrentTab }: AboutViewProps) {
                 <button
                   key={step.step}
                   onClick={() => setActiveStep(step.step)}
-                  className={`w-full text-left rounded-xl p-3 border transition-all duration-200 flex items-center justify-between ${isActive
+                  className={`w-full text-left rounded-xl p-3 border transition-all duration-200 flex items-center justify-between ${
+                    isActive
                       ? "border-blue-500 bg-blue-50/60 dark:bg-zinc-900/80 shadow-sm"
                       : "border-gray-200/80 dark:border-zinc-800 bg-white dark:bg-zinc-950/20 hover:bg-gray-50"
-                    }`}
+                  }`}
                 >
                   <div className="flex items-center space-x-3">
                     <span
-                      className={`flex h-7 w-7 items-center justify-center rounded-lg text-xs font-bold ${isActive
+                      className={`flex h-7 w-7 items-center justify-center rounded-lg text-xs font-bold ${
+                        isActive
                           ? "bg-blue-600 text-white"
                           : "bg-gray-100 dark:bg-zinc-850 text-gray-500"
-                        }`}
+                      }`}
                     >
                       0{step.step}
                     </span>
@@ -358,10 +360,11 @@ export default function AboutView({ setCurrentTab }: AboutViewProps) {
               <button
                 key={pill.id}
                 onClick={() => setSelectedTechCategory(pill.id)}
-                className={`rounded-lg px-3.5 py-1.5 text-xs font-semibold transition-all ${selectedTechCategory === pill.id
+                className={`rounded-lg px-3.5 py-1.5 text-xs font-semibold transition-all ${
+                  selectedTechCategory === pill.id
                     ? "bg-blue-600 text-white shadow-md shadow-blue-500/10"
                     : "bg-gray-100 text-gray-600 dark:bg-zinc-800/80 dark:text-gray-300 hover:bg-gray-200"
-                  }`}
+                }`}
               >
                 {pill.label}
               </button>

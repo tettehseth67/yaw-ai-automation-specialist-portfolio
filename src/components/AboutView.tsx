@@ -5,19 +5,19 @@
 
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import {
-  Sparkles,
-  Workflow,
-  ShieldCheck,
-  Zap,
-  ArrowRight,
-  ChevronRight,
-  Cpu,
-  Code,
-  GitMerge,
-  Compass,
+import { 
+  Sparkles, 
+  Workflow, 
+  ShieldCheck, 
+  Zap, 
+  ArrowRight, 
+  ChevronRight, 
+  Cpu, 
+  Code, 
+  GitMerge, 
+  Compass, 
   Award,
-  BookOpen,
+  BookOpen
 } from "lucide-react";
 import { TECHNOLOGIES, PROCESS_STEPS } from "../data";
 
@@ -27,11 +27,11 @@ interface AboutViewProps {
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] },
-  },
+  visible: { 
+    opacity: 1, 
+    y: 0, 
+    transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] } 
+  }
 };
 
 const staggerContainer = {
@@ -39,33 +39,26 @@ const staggerContainer = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.1,
-    },
-  },
+      staggerChildren: 0.1
+    }
+  }
 };
 
 export default function AboutView({ setCurrentTab }: AboutViewProps) {
   const [activeStep, setActiveStep] = useState<number>(1);
-  const [selectedTechCategory, setSelectedTechCategory] =
-    useState<string>("all");
+  const [selectedTechCategory, setSelectedTechCategory] = useState<string>("all");
 
-  const filteredTech =
-    selectedTechCategory === "all"
-      ? TECHNOLOGIES
-      : TECHNOLOGIES.filter((t) => t.category === selectedTechCategory);
+  const filteredTech = selectedTechCategory === "all" 
+    ? TECHNOLOGIES 
+    : TECHNOLOGIES.filter(t => t.category === selectedTechCategory);
 
   const getTechCategoryLabel = (category: string) => {
-    switch (category) {
-      case "ai":
-        return "Artificial Intelligence";
-      case "automation":
-        return "Workflow Orchestration";
-      case "integration":
-        return "Lead Gen & Data";
-      case "database":
-        return "Data & Vectors";
-      default:
-        return category;
+    switch(category) {
+      case "ai": return "Artificial Intelligence";
+      case "automation": return "Workflow Orchestration";
+      case "integration": return "Lead Gen & Data";
+      case "database": return "Data & Vectors";
+      default: return category;
     }
   };
 
@@ -77,7 +70,7 @@ export default function AboutView({ setCurrentTab }: AboutViewProps) {
   return (
     <div className="space-y-24 pb-16 pt-8">
       {/* 1. YAW'S STORY & PROFILE */}
-      <motion.section
+      <motion.section 
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
@@ -89,25 +82,19 @@ export default function AboutView({ setCurrentTab }: AboutViewProps) {
           <div className="lg:col-span-5 flex flex-col items-center">
             <div className="relative w-full max-w-[340px] aspect-[4/5] rounded-3xl overflow-hidden border border-gray-200/80 dark:border-zinc-800 p-2 bg-white dark:bg-zinc-900 shadow-xl">
               <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/10 to-cyan-500/10" />
-              <img
-                src="/images/yaw-profile-photo.png"
-                alt="Yaw - AI Automation Specialist"
-                className="h-full w-full object-cover rounded-2xl contrast-105"
+              <img 
+                src="https://picsum.photos/seed/yawprofile/600/750" 
+                alt="Yaw - AI Automation Specialist" 
+                className="h-full w-full object-cover rounded-2xl filter contrast-105"
                 referrerPolicy="no-referrer"
               />
               {/* Overlay Tag */}
               <div className="absolute bottom-6 left-6 right-6 bg-white/90 dark:bg-zinc-950/90 backdrop-blur-md rounded-2xl p-4 border border-gray-100 dark:border-zinc-800 shadow-md">
-                <p className="text-xs font-bold text-gray-900 dark:text-white leading-none">
-                  Yaw
-                </p>
-                <p className="text-[10px] text-gray-500 dark:text-gray-400 mt-1">
-                  Founder & Lead Automation Architect
-                </p>
+                <p className="text-xs font-bold text-gray-900 dark:text-white leading-none">Yaw</p>
+                <p className="text-[10px] text-gray-500 dark:text-gray-400 mt-1">Founder & Lead Automation Architect</p>
                 <div className="flex items-center space-x-1 mt-2">
                   <span className="h-2 w-2 rounded-full bg-green-500" />
-                  <span className="text-[9px] font-bold text-green-700 dark:text-green-400">
-                    Consulting Slots Open (July)
-                  </span>
+                  <span className="text-[9px] font-bold text-green-700 dark:text-green-400">Consulting Slots Open (July)</span>
                 </div>
               </div>
             </div>
@@ -116,21 +103,13 @@ export default function AboutView({ setCurrentTab }: AboutViewProps) {
             <div className="grid grid-cols-2 gap-4 w-full max-w-[340px] mt-6">
               <div className="rounded-xl border border-gray-150 dark:border-zinc-850 p-3 bg-gray-50/50 dark:bg-zinc-950/20 text-center">
                 <Award className="h-5 w-5 mx-auto text-blue-600 mb-1" />
-                <span className="text-[10px] font-bold text-gray-800 dark:text-zinc-200 block">
-                  Zapier Certified
-                </span>
-                <span className="text-[9px] text-gray-400">
-                  Global Elite Tier
-                </span>
+                <span className="text-[10px] font-bold text-gray-800 dark:text-zinc-200 block">Zapier Certified</span>
+                <span className="text-[9px] text-gray-400">Global Elite Tier</span>
               </div>
               <div className="rounded-xl border border-gray-150 dark:border-zinc-850 p-3 bg-gray-50/50 dark:bg-zinc-950/20 text-center">
                 <Workflow className="h-5 w-5 mx-auto text-cyan-500 mb-1" />
-                <span className="text-[10px] font-bold text-gray-800 dark:text-zinc-200 block">
-                  Make Partner
-                </span>
-                <span className="text-[9px] text-gray-400">
-                  Platinum Engineering
-                </span>
+                <span className="text-[10px] font-bold text-gray-800 dark:text-zinc-200 block">Make Partner</span>
+                <span className="text-[9px] text-gray-400">Platinum Engineering</span>
               </div>
             </div>
           </div>
@@ -141,69 +120,40 @@ export default function AboutView({ setCurrentTab }: AboutViewProps) {
               <BookOpen className="h-3.5 w-3.5" />
               <span>Behind the Blueprint</span>
             </div>
-
+            
             <h2 className="text-3xl sm:text-4xl font-black text-gray-950 dark:text-white tracking-tight leading-tight">
-              Meet{" "}
-              <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
-                Yaw
-              </span>
+              Meet <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Yaw</span>
             </h2>
 
             <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-300 leading-relaxed font-semibold">
-              I'm Yaw, an AI Automation Specialist with over 2 years of
-              experience helping businesses streamline operations, automate
-              repetitive tasks, and unlock new levels of productivity through
-              intelligent automation.
+              I'm Yaw, an AI Automation Specialist with over 2 years of experience helping businesses streamline operations, automate repetitive tasks, and unlock new levels of productivity through intelligent automation.
             </p>
 
             <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
-              I work with businesses that want to save time, reduce manual
-              workload, and scale more efficiently by implementing AI-powered
-              systems and automated workflows. My expertise includes workflow
-              automation, AI agents, business process optimization, CRM
-              automation, lead generation systems, and custom integrations that
-              connect the tools businesses rely on every day.
+              I work with businesses that want to save time, reduce manual workload, and scale more efficiently by implementing AI-powered systems and automated workflows. My expertise includes workflow automation, AI agents, business process optimization, CRM automation, lead generation systems, and custom integrations that connect the tools businesses rely on every day.
             </p>
 
             <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
-              Using technologies such as Make, Zapier, Python, OpenAI,
-              LangChain, and other modern automation platforms, I design
-              solutions that eliminate bottlenecks, improve operational
-              efficiency, and create seamless digital experiences. Whether it's
-              automating customer interactions, simplifying internal processes,
-              or building AI-driven business solutions, I focus on delivering
-              measurable results that drive growth.
+              Using technologies such as Make, Zapier, Python, OpenAI, LangChain, and other modern automation platforms, I design solutions that eliminate bottlenecks, improve operational efficiency, and create seamless digital experiences. Whether it's automating customer interactions, simplifying internal processes, or building AI-driven business solutions, I focus on delivering measurable results that drive growth.
             </p>
 
             <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
-              My approach combines technical expertise with a deep understanding
-              of business operations. I don't just build automations—I create
-              systems that help organizations operate smarter, respond faster,
-              and scale sustainably.
+              My approach combines technical expertise with a deep understanding of business operations. I don't just build automations—I create systems that help organizations operate smarter, respond faster, and scale sustainably.
             </p>
 
             <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
-              As AI continues to transform the way businesses work, my mission
-              is to help companies leverage automation strategically, allowing
-              teams to focus on high-value work while technology handles
-              repetitive processes behind the scenes.
+              As AI continues to transform the way businesses work, my mission is to help companies leverage automation strategically, allowing teams to focus on high-value work while technology handles repetitive processes behind the scenes.
             </p>
 
             <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
-              If you're looking to save time, increase efficiency, and harness
-              the power of AI to grow your business, I'd love to help turn your
-              vision into reality.
+              If you're looking to save time, increase efficiency, and harness the power of AI to grow your business, I'd love to help turn your vision into reality.
             </p>
 
             {/* Mission Panel */}
             <div className="rounded-2xl border-l-4 border-blue-600 bg-blue-50/30 dark:bg-zinc-900/40 p-4 space-y-2">
-              <p className="text-xs font-extrabold text-blue-700 dark:text-cyan-400 uppercase tracking-widest">
-                THE MISSION
-              </p>
+              <p className="text-xs font-extrabold text-blue-700 dark:text-cyan-400 uppercase tracking-widest">THE MISSION</p>
               <p className="text-xs sm:text-sm font-medium text-gray-800 dark:text-zinc-200 italic leading-relaxed">
-                "We design automation architectures to erase cognitive drudgery.
-                Our systems work flawlessly in the background, enabling human
-                creativity and scaling organization throughput 24/7."
+                "We design automation architectures to erase cognitive drudgery. Our systems work flawlessly in the background, enabling human creativity and scaling organization throughput 24/7."
               </p>
             </div>
           </div>
@@ -211,7 +161,7 @@ export default function AboutView({ setCurrentTab }: AboutViewProps) {
       </motion.section>
 
       {/* 2. CORE WORK METHODOLOGY & PROCESS TIMELINE */}
-      <motion.section
+      <motion.section 
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
@@ -223,9 +173,7 @@ export default function AboutView({ setCurrentTab }: AboutViewProps) {
             How We Partner: The Blueprint Framework
           </h2>
           <p className="text-sm text-gray-600 dark:text-gray-300">
-            A battle-tested, 5-stage implementation workflow designed to
-            minimize disruption, assure complete security, and deliver fast
-            business returns.
+            A battle-tested, 5-stage implementation workflow designed to minimize disruption, assure complete security, and deliver fast business returns.
           </p>
         </div>
 
@@ -246,24 +194,18 @@ export default function AboutView({ setCurrentTab }: AboutViewProps) {
                   }`}
                 >
                   <div className="flex items-center space-x-3">
-                    <span
-                      className={`flex h-7 w-7 items-center justify-center rounded-lg text-xs font-bold ${
-                        isActive
-                          ? "bg-blue-600 text-white"
-                          : "bg-gray-100 dark:bg-zinc-850 text-gray-500"
-                      }`}
-                    >
+                    <span className={`flex h-7 w-7 items-center justify-center rounded-lg text-xs font-bold ${
+                      isActive 
+                        ? "bg-blue-600 text-white" 
+                        : "bg-gray-100 dark:bg-zinc-850 text-gray-500"
+                    }`}>
                       0{step.step}
                     </span>
-                    <span
-                      className={`text-xs font-bold ${isActive ? "text-blue-600 dark:text-cyan-400" : "text-gray-700 dark:text-gray-300"}`}
-                    >
+                    <span className={`text-xs font-bold ${isActive ? "text-blue-600 dark:text-cyan-400" : "text-gray-700 dark:text-gray-300"}`}>
                       {step.title}
                     </span>
                   </div>
-                  <ChevronRight
-                    className={`h-4 w-4 transition-transform ${isActive ? "translate-x-1 text-blue-600" : "text-gray-400"}`}
-                  />
+                  <ChevronRight className={`h-4 w-4 transition-transform ${isActive ? "translate-x-1 text-blue-600" : "text-gray-400"}`} />
                 </button>
               );
             })}
@@ -308,14 +250,9 @@ export default function AboutView({ setCurrentTab }: AboutViewProps) {
                       </p>
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                         {step.deliverables.map((del, i) => (
-                          <div
-                            key={i}
-                            className="flex items-start space-x-2 text-xs"
-                          >
+                          <div key={i} className="flex items-start space-x-2 text-xs">
                             <ShieldCheck className="h-4.5 w-4.5 text-green-500 shrink-0 mt-0.5" />
-                            <span className="text-gray-700 dark:text-gray-300 font-medium leading-tight">
-                              {del}
-                            </span>
+                            <span className="text-gray-700 dark:text-gray-300 font-medium leading-tight">{del}</span>
                           </div>
                         ))}
                       </div>
@@ -329,7 +266,7 @@ export default function AboutView({ setCurrentTab }: AboutViewProps) {
       </motion.section>
 
       {/* 3. TECHNOLOGY STACK SHOWCASE */}
-      <motion.section
+      <motion.section 
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
@@ -342,9 +279,7 @@ export default function AboutView({ setCurrentTab }: AboutViewProps) {
               Curated Enterprise Stack
             </h2>
             <p className="text-sm text-gray-600 dark:text-gray-300">
-              We engineer custom automations on top of industry-leading, secure
-              infrastructure. Select a category below to filter our core
-              toolkit.
+              We engineer custom automations on top of industry-leading, secure infrastructure. Select a category below to filter our core toolkit.
             </p>
           </div>
 
@@ -355,7 +290,7 @@ export default function AboutView({ setCurrentTab }: AboutViewProps) {
               { id: "ai", label: "AI Engines" },
               { id: "automation", label: "Orchestration" },
               { id: "integration", label: "Lead Gen" },
-              { id: "database", label: "Vectors" },
+              { id: "database", label: "Vectors" }
             ].map((pill) => (
               <button
                 key={pill.id}
@@ -387,9 +322,7 @@ export default function AboutView({ setCurrentTab }: AboutViewProps) {
               >
                 <div className="space-y-2">
                   <div className="flex items-center justify-between">
-                    <span className="text-xs font-bold text-gray-900 dark:text-white">
-                      {tech.name}
-                    </span>
+                    <span className="text-xs font-bold text-gray-900 dark:text-white">{tech.name}</span>
                     <span className="text-[9px] font-bold uppercase tracking-wider text-blue-600 dark:text-cyan-400 px-2 py-0.5 rounded-md bg-blue-50 dark:bg-zinc-950">
                       {tech.category}
                     </span>
@@ -405,7 +338,7 @@ export default function AboutView({ setCurrentTab }: AboutViewProps) {
       </motion.section>
 
       {/* 4. WHY PARTNER WITH YAW? */}
-      <motion.section
+      <motion.section 
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
@@ -422,18 +355,13 @@ export default function AboutView({ setCurrentTab }: AboutViewProps) {
               An Elite Engineering Standard. No Junior Hand-offs.
             </h3>
             <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
-              When you hire traditional agencies, you often map details with a
-              senior consultant, only for the actual coding to be handed down to
-              junior developers.
+              When you hire traditional agencies, you often map details with a senior consultant, only for the actual coding to be handed down to junior developers. 
             </p>
             <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
-              By partnering with me, you work directly with a senior developer.
-              Every API payload structure, system guardrail, and prompt pipeline
-              is structured by an expert, ensuring total reliability and
-              security.
+              By partnering with me, you work directly with a senior developer. Every API payload structure, system guardrail, and prompt pipeline is structured by an expert, ensuring total reliability and security.
             </p>
             <div className="pt-2">
-              <button
+              <button 
                 onClick={handleBookClick}
                 className="group inline-flex items-center space-x-1 text-xs font-bold text-blue-600 dark:text-cyan-400 hover:underline"
               >
@@ -445,33 +373,14 @@ export default function AboutView({ setCurrentTab }: AboutViewProps) {
 
           <div className="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
             {[
-              {
-                title: "No Tech Lock-in",
-                desc: "You retain 100% ownership of all Make.com blueprints, code scripts, and vector logs built for your brand.",
-              },
-              {
-                title: "Zero Silent Failures",
-                desc: "Every system includes direct Slack/email notification logs when APIs or models throw unexpected errors.",
-              },
-              {
-                title: "Enterprise Security",
-                desc: "Customer data is encrypted at rest and in transit. Your corporate details are never used for public model training.",
-              },
-              {
-                title: "Continuous Calibration",
-                desc: "We provide thorough hand-off recordings, training documentation, and initial maintenance support.",
-              },
+              { title: "No Tech Lock-in", desc: "You retain 100% ownership of all Make.com blueprints, code scripts, and vector logs built for your brand." },
+              { title: "Zero Silent Failures", desc: "Every system includes direct Slack/email notification logs when APIs or models throw unexpected errors." },
+              { title: "Enterprise Security", desc: "Customer data is encrypted at rest and in transit. Your corporate details are never used for public model training." },
+              { title: "Continuous Calibration", desc: "We provide thorough hand-off recordings, training documentation, and initial maintenance support." }
             ].map((box, i) => (
-              <div
-                key={i}
-                className="rounded-xl border border-gray-150 dark:border-zinc-850 p-4 bg-gray-50/40 dark:bg-zinc-950/20 space-y-1.5"
-              >
-                <span className="font-extrabold text-xs text-gray-900 dark:text-white block">
-                  {box.title}
-                </span>
-                <p className="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">
-                  {box.desc}
-                </p>
+              <div key={i} className="rounded-xl border border-gray-150 dark:border-zinc-850 p-4 bg-gray-50/40 dark:bg-zinc-950/20 space-y-1.5">
+                <span className="font-extrabold text-xs text-gray-900 dark:text-white block">{box.title}</span>
+                <p className="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">{box.desc}</p>
               </div>
             ))}
           </div>

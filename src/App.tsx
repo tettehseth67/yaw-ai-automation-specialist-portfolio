@@ -11,6 +11,7 @@ import AboutView from "./components/AboutView";
 import ServicesView from "./components/ServicesView";
 import CaseStudiesView from "./components/CaseStudiesView";
 import ContactView from "./components/ContactView";
+import AppsView from "./components/AppsView";
 import { Sparkles, ArrowUp, Calendar, Zap } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 import { useToast } from "./components/Toast";
@@ -125,6 +126,8 @@ export default function App() {
         return <CaseStudiesView setCurrentTab={setCurrentTab} />;
       case "contact":
         return <ContactView />;
+      case "apps":
+        return <AppsView />;
       default:
         return <HomeView setCurrentTab={setCurrentTab} />;
     }

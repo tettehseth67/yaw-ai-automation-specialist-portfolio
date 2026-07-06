@@ -22,6 +22,7 @@ export default function Navbar({ currentTab, setCurrentTab, darkMode, toggleDark
     { id: "home", label: "Home" },
     { id: "services", label: "Services" },
     { id: "cases", label: "Case Studies" },
+    { id: "apps", label: "Interactive Apps" },
     { id: "about", label: "About" },
     { id: "contact", label: "Contact & Booking" }
   ];

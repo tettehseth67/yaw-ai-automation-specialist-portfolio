@@ -106,6 +106,11 @@ export default function Footer({ setCurrentTab }: FooterProps) {
                 </button>
               </li>
               <li>
+                <button onClick={() => handleNavClick("apps")} className="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-cyan-400 font-bold transition-colors">
+                  Interactive Apps Hub
+                </button>
+              </li>
+              <li>
                 <button onClick={() => handleNavClick("about")} className="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-cyan-400 transition-colors">
                   About Yaw
                 </button>

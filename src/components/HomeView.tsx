@@ -247,7 +247,7 @@ export default function HomeView({ setCurrentTab, darkMode = true, toggleDarkMod
       name: "Marcus Sterling",
       role: "CEO & Co-Founder",
       company: "AuraVibe Essentials",
-      image: "https://picsum.photos/seed/marcus/120/120",
+      image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=150&h=150&q=80",
       text: "Yaw is a visionary. He restructured our entire customer support architecture in under 3 weeks. Wisconsin holiday sales surges used to be our biggest operations nightmare; now, we sleep soundly while the AI handles 92% of queries instantly.",
       metrics: "Saved $11.2k/month & raised CSAT by 28%",
       rating: 5
@@ -256,7 +256,7 @@ export default function HomeView({ setCurrentTab, darkMode = true, toggleDarkMod
       name: "Sarah Jenkins",
       role: "VP of Operations",
       company: "ScalePath Media",
-      image: "https://picsum.photos/seed/jenkins/120/120",
+      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=150&h=150&q=80",
       text: "Our sales representatives were bogged down in outbound research. Yaw built an outbound machine that finds high-value leads, enriches them with custom hooks, and queues automated multi-channel sequences. Booking rates literally quadrupled.",
       metrics: "4.8% meeting booking rate & $140k pipeline added",
       rating: 5
@@ -265,7 +265,7 @@ export default function HomeView({ setCurrentTab, darkMode = true, toggleDarkMod
       name: "Julian Vance",
       role: "Managing Partner",
       company: "Vanguard Property Group",
-      image: "https://picsum.photos/seed/julian/120/120",
+      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=150&h=150&q=80",
       text: "We were highly skeptical about AI's capacity to parse complex commercial lease documents, but Yaw's custom extraction pipeline exceeded our highest expectations. What used to take days of tedious manual review now takes 12 minutes flat.",
       metrics: "Deal evaluation speed cut by 98% with zero errors",
       rating: 5

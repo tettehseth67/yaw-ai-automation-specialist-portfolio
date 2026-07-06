@@ -17,9 +17,13 @@ import {
   GitMerge, 
   Compass, 
   Award,
+<<<<<<< HEAD
   BookOpen,
   Bot,
   Rocket
+=======
+  BookOpen
+>>>>>>> 0d7862a32ddadd674b30aa42377464972d0053a5
 } from "lucide-react";
 import { TECHNOLOGIES, PROCESS_STEPS } from "../data";
 
@@ -80,6 +84,7 @@ export default function AboutView({ setCurrentTab }: AboutViewProps) {
         className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"
       >
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<<<<<<< HEAD
           {/* Left Column: Visual Bio with the user photo representation */}
           <div className="lg:col-span-5 flex flex-col items-center">
             <div className="relative w-full max-w-[360px] aspect-[4/5] rounded-3xl overflow-hidden border border-gray-200/85 dark:border-zinc-800 p-2.5 bg-white dark:bg-zinc-900 shadow-2xl">
@@ -96,19 +101,46 @@ export default function AboutView({ setCurrentTab }: AboutViewProps) {
                 <p className="text-[10px] text-gray-500 dark:text-gray-400 mt-1">Founder & Lead Automation Architect</p>
                 <div className="flex items-center space-x-1.5 mt-2">
                   <span className="h-2 w-2 rounded-full bg-green-500 animate-pulse" />
+=======
+          {/* Left Column: Visual Bio */}
+          <div className="lg:col-span-5 flex flex-col items-center">
+            <div className="relative w-full max-w-[340px] aspect-[4/5] rounded-3xl overflow-hidden border border-gray-200/80 dark:border-zinc-800 p-2 bg-white dark:bg-zinc-900 shadow-xl">
+              <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/10 to-cyan-500/10" />
+              <img 
+                src="https://picsum.photos/seed/yawprofile/600/750" 
+                alt="Yaw - AI Automation Specialist" 
+                className="h-full w-full object-cover rounded-2xl filter contrast-105"
+                referrerPolicy="no-referrer"
+              />
+              {/* Overlay Tag */}
+              <div className="absolute bottom-6 left-6 right-6 bg-white/90 dark:bg-zinc-950/90 backdrop-blur-md rounded-2xl p-4 border border-gray-100 dark:border-zinc-800 shadow-md">
+                <p className="text-xs font-bold text-gray-900 dark:text-white leading-none">Yaw</p>
+                <p className="text-[10px] text-gray-500 dark:text-gray-400 mt-1">Founder & Lead Automation Architect</p>
+                <div className="flex items-center space-x-1 mt-2">
+                  <span className="h-2 w-2 rounded-full bg-green-500" />
+>>>>>>> 0d7862a32ddadd674b30aa42377464972d0053a5
                   <span className="text-[9px] font-bold text-green-700 dark:text-green-400">Consulting Slots Open (July)</span>
                 </div>
               </div>
             </div>
 
             {/* Credential Indicators */}
+<<<<<<< HEAD
             <div className="grid grid-cols-2 gap-4 w-full max-w-[360px] mt-6">
               <div className="rounded-xl border border-gray-150 dark:border-zinc-850 p-3 bg-gray-50/50 dark:bg-zinc-950/20 text-center shadow-sm">
+=======
+            <div className="grid grid-cols-2 gap-4 w-full max-w-[340px] mt-6">
+              <div className="rounded-xl border border-gray-150 dark:border-zinc-850 p-3 bg-gray-50/50 dark:bg-zinc-950/20 text-center">
+>>>>>>> 0d7862a32ddadd674b30aa42377464972d0053a5
                 <Award className="h-5 w-5 mx-auto text-blue-600 mb-1" />
                 <span className="text-[10px] font-bold text-gray-800 dark:text-zinc-200 block">Zapier Certified</span>
                 <span className="text-[9px] text-gray-400">Global Elite Tier</span>
               </div>
+<<<<<<< HEAD
               <div className="rounded-xl border border-gray-150 dark:border-zinc-850 p-3 bg-gray-50/50 dark:bg-zinc-950/20 text-center shadow-sm">
+=======
+              <div className="rounded-xl border border-gray-150 dark:border-zinc-850 p-3 bg-gray-50/50 dark:bg-zinc-950/20 text-center">
+>>>>>>> 0d7862a32ddadd674b30aa42377464972d0053a5
                 <Workflow className="h-5 w-5 mx-auto text-cyan-500 mb-1" />
                 <span className="text-[10px] font-bold text-gray-800 dark:text-zinc-200 block">Make Partner</span>
                 <span className="text-[9px] text-gray-400">Platinum Engineering</span>
@@ -116,13 +148,18 @@ export default function AboutView({ setCurrentTab }: AboutViewProps) {
             </div>
           </div>
 
+<<<<<<< HEAD
           {/* Right Column: Narrative with Design elements matching the photo exactly */}
+=======
+          {/* Right Column: Narrative */}
+>>>>>>> 0d7862a32ddadd674b30aa42377464972d0053a5
           <div className="lg:col-span-7 space-y-6">
             <div className="inline-flex items-center space-x-2 rounded-full border border-blue-200/80 dark:border-zinc-800 bg-blue-50/50 dark:bg-zinc-900/40 px-3 py-1 text-xs font-semibold text-blue-700 dark:text-cyan-400">
               <BookOpen className="h-3.5 w-3.5" />
               <span>Behind the Blueprint</span>
             </div>
             
+<<<<<<< HEAD
             <h2 className="text-4xl sm:text-5xl font-black text-gray-950 dark:text-white tracking-tight leading-none uppercase">
               ABOUT <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">ME</span>
             </h2>
@@ -175,6 +212,41 @@ export default function AboutView({ setCurrentTab }: AboutViewProps) {
             <div className="pl-4 border-l-4 border-blue-600 py-1.5 bg-blue-50/20 dark:bg-blue-950/10 rounded-r-xl">
               <p className="text-xs sm:text-sm font-extrabold text-gray-950 dark:text-white">
                 Automate Today. <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Grow Tomorrow.</span>
+=======
+            <h2 className="text-3xl sm:text-4xl font-black text-gray-950 dark:text-white tracking-tight leading-tight">
+              Meet <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Yaw</span>
+            </h2>
+
+            <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-300 leading-relaxed font-semibold">
+              I'm Yaw, an AI Automation Specialist with over 2 years of experience helping businesses streamline operations, automate repetitive tasks, and unlock new levels of productivity through intelligent automation.
+            </p>
+
+            <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+              I work with businesses that want to save time, reduce manual workload, and scale more efficiently by implementing AI-powered systems and automated workflows. My expertise includes workflow automation, AI agents, business process optimization, CRM automation, lead generation systems, and custom integrations that connect the tools businesses rely on every day.
+            </p>
+
+            <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+              Using technologies such as Make, Zapier, Python, OpenAI, LangChain, and other modern automation platforms, I design solutions that eliminate bottlenecks, improve operational efficiency, and create seamless digital experiences. Whether it's automating customer interactions, simplifying internal processes, or building AI-driven business solutions, I focus on delivering measurable results that drive growth.
+            </p>
+
+            <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+              My approach combines technical expertise with a deep understanding of business operations. I don't just build automations—I create systems that help organizations operate smarter, respond faster, and scale sustainably.
+            </p>
+
+            <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+              As AI continues to transform the way businesses work, my mission is to help companies leverage automation strategically, allowing teams to focus on high-value work while technology handles repetitive processes behind the scenes.
+            </p>
+
+            <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+              If you're looking to save time, increase efficiency, and harness the power of AI to grow your business, I'd love to help turn your vision into reality.
+            </p>
+
+            {/* Mission Panel */}
+            <div className="rounded-2xl border-l-4 border-blue-600 bg-blue-50/30 dark:bg-zinc-900/40 p-4 space-y-2">
+              <p className="text-xs font-extrabold text-blue-700 dark:text-cyan-400 uppercase tracking-widest">THE MISSION</p>
+              <p className="text-xs sm:text-sm font-medium text-gray-800 dark:text-zinc-200 italic leading-relaxed">
+                "We design automation architectures to erase cognitive drudgery. Our systems work flawlessly in the background, enabling human creativity and scaling organization throughput 24/7."
+>>>>>>> 0d7862a32ddadd674b30aa42377464972d0053a5
               </p>
             </div>
           </div>
